@@ -1,0 +1,47 @@
+.header-top {
+  padding: 6px 0;
+  background: $sangria;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    select {
+      width: 70px;
+      height: 100%;
+      background: white;
+      cursor: pointer;
+    }
+  }
+
+  &__phones,
+  &__socials,
+  .languages,
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+  &__phones {
+    color: white;
+    li {
+      padding: 0 10px;
+      border-right: 1px solid white;
+      &:last-child {
+        border: none;
+      }
+    }
+    a {
+      color: inherit;
+    }
+    span {
+      @include robotocondensed;
+    }
+    svg {
+      margin-right: 8px;
+    }
+  }
+}
