@@ -1,7 +1,6 @@
 extends template
 
 block css
-    link(rel="stylesheet" type="text/css" href="assets/libs/fontawesome/all.css")
     link(rel="stylesheet" type="text/css" href="assets/css/my.css")
 
 block title
@@ -13,9 +12,10 @@ block content
         include ../../../build/assets/i/svg/inline/sprite.svg
 
     include ../includes/header/header
+    include ../includes/navigation/navigation
+    include ../includes/video/video
 
     include ../includes/scripts/ie-scripts
 
 block scripts
     script(src="assets/libs/jquery-easy-scroll/jquery.easeScroll.js")
-    script(src="assets/libs/fontawesome/all.min.js")

@@ -1,0 +1,39 @@
+.navigation
+    .container
+        .navigation__content
+            .show-menu
+                .sandwitch
+                    .sandwitch__line.sandwitch__line--top
+                    .sandwitch__line.sandwitch__line--middle
+                    .sandwitch__line.sandwitch__line--bottom
+                h3  Menu
+            ul.main-menu#js-main-menu
+                li.current-menu-item
+                    a(href="index.html") Home
+                li
+                    a(href="about.html") About us
+                li
+                    a(href="catalog.html") Catalogue
+                li
+                    a(href="how-to-buy.html") How to buy
+                li
+                    a(href="help.html") Help
+                li
+                    a(href="guest-book.html") Guest book
+                li
+                    a(href="video.html") Video
+                li
+                    a(href="contacts.html") Contacts
+
+            form.search#js-search
+                input(type="text" placeholder="Search")
+                button(type="submit")
+                    +icon('search', 'search')
+
+            .registration
+                a(href="#")
+                   +icon('login', 'login')
+                   span Login
+                a(href="#")
+                    +icon('registration', 'registration')
+                    span Join

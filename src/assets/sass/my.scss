@@ -17,6 +17,10 @@ body {
   line-height: 20px;
   color: #444;
   background: white;
+  &.fixed {
+    padding-right: 14px;
+    overflow: hidden;
+  }
 }
 
 * {
@@ -75,3 +79,5 @@ p {
 }
 
 @import "blocks/header";
+@import "blocks/navigation";
+@import "blocks/video";

@@ -1,0 +1,243 @@
+.navigation {
+  @media screen and (max-width: 390px) {
+  	padding: 20px 0;
+  }
+
+  padding: 4px 0;
+  background: $sangria;
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 390px) {
+      display: table;
+      margin: 0 auto;
+      & > *{
+          margin: 10px 0;
+          &:first-child {
+              margin-top: 0;
+          }
+          &:last-child {
+              margin-bottom: 0;
+          }
+      }
+
+    }
+  }
+
+  .main-menu {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 1150px) {
+      display: none;
+    }
+
+    &.active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      padding-top: 5%;
+      text-align: center;
+      background: $sangria;
+      li {
+        margin: 0 auto;
+        width: 300px;
+        a {
+          border: none;
+        }
+      }
+    }
+
+    li:first-child {
+      a {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+    }
+
+    li:last-child {
+      a {
+        border: none;
+      }
+    }
+
+    li.current-menu-item {
+      a {
+        color: #9F0004;
+        background-color: #fff;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    a {
+      display: block;
+      padding: 0 14px;
+      height: 32px;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 32px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      border-right: 1px solid #FFB5B5;
+      transition: all .3s ease;
+
+      &:hover {
+        color: #9F0004;
+        background-color: #fff;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    input[type="text"] {
+      width: 130px;
+      height: 30px;
+      text-indent: 10px;
+
+      &.changed {
+        background: #eee;
+        border: none;
+      }
+    }
+
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    svg {
+      fill: white;
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .registration {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 0px 15px;
+      height: 32px;
+      line-height: 32px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      transition: all .4s ease;
+
+      &:hover {
+        color: $sangria;
+        background: #fff;
+
+        svg {
+          fill: $sangria;
+        }
+      }
+
+      &:first-child {
+        border-right: 1px solid #FFB5B5;
+      }
+    }
+
+    svg {
+      fill: white;
+      margin-right: 4px;
+      width: 14px;
+      height: 16px;
+    }
+  }
+}
+
+
+.sandwitch {
+  position: relative;
+  margin-right: 50%;
+  width: 23px;
+  height: 14px;
+  cursor: pointer;
+  @media screen and (max-width: 390px) {
+    margin-right: 30px;
+  }
+
+}
+
+.sandwitch--active .sandwitch__line--top {
+  top: 6px;
+  transform: rotate(45deg);
+}
+
+.sandwitch--active .sandwitch__line--middle {
+  opacity: 0;
+}
+
+.sandwitch--active .sandwitch__line--bottom {
+  top: 6px;
+  transform: rotate(-45deg);
+}
+
+.sandwitch__line {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  transition: all linear 0.1s;
+  background-color: #fff;
+}
+
+.sandwitch__line--top {
+  top: 0;
+}
+
+.sandwitch__line--middle {
+  top: 6px;
+}
+
+.sandwitch__line--bottom {
+  top: 12px;
+}
+
+.show-menu {
+  display: none;
+  width: 100%;
+  text-align: center;
+  @media screen and (max-width: 1150px) {
+    display: flex;
+    align-items: center;
+  }
+  @media screen and (max-width: 560px) {
+    display: table;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 390px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  h3 {
+    font-size: 17px;
+    text-transform: uppercase;
+    color: white;
+    @media screen and (max-width: 560px) {
+      display: none;
+    }
+    @media screen and (max-width: 390px) {
+      display: block;
+    }
+  }
+}

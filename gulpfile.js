@@ -188,6 +188,14 @@ gulp.task("audio", function () {
 		}));
 });
 
+gulp.task("video", function () {
+	return gulp.src('src/assets/video/**/*.*')
+		.pipe(gulp.dest('build/assets/video/'))
+		.pipe(browserSync.reload({
+			stream: true
+		}));
+});
+
 /* image:dev
 ====================================================*/
 gulp.task("image", function () {
@@ -232,6 +240,7 @@ gulp.task("watch", function () {
 	gulp.watch(['src/assets/i/svg/bg/*.*'], gulp.series("svg-bg"));
 	gulp.watch(['src/assets/fonts/**/*.*'], gulp.series("fonts"));
 	gulp.watch(['src/assets/audio/**/*.*'], gulp.series("audio"));
+	gulp.watch(['src/assets/video/**/*.*'], gulp.series("video"));
 });
 
 gulp.task('browser-sync', function () {
@@ -255,6 +264,7 @@ gulp.task('default', gulp.series(
 		// 'svg-bg',
 		'fonts',
 		'audio',
+		'video',
 		'image',
 		'libs',
 		'favicon'
