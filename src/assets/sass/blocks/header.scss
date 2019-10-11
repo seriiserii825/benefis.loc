@@ -11,6 +11,7 @@
       text-align: center;
     }
   }
+
   &__info {
     display: flex;
     align-items: center;
@@ -91,6 +92,7 @@
     }
 
   }
+
   &__socials {
     margin-right: 10px;
     @media screen and (max-width: 450px) {
@@ -131,6 +133,101 @@
       &:hover {
         color: $allports;
       }
+    }
+  }
+}
+
+.header-bottom {
+  padding: 16px 0;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 1130px) {
+    	flex-wrap: wrap;
+    }
+    @media screen and (max-width: 798px) {
+      display: block;
+    }
+
+
+  }
+  .logo {
+    display: block;
+    width: 154px;
+    @media screen and (max-width: 798px) {
+      display: table;
+      margin: 0 auto 20px;
+    }
+  }
+  .promo {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 1130px) {
+      margin-bottom: 20px;
+    }
+    @media screen and (max-width: 798px) {
+      display: table;
+      margin: 0 auto 20px;
+    }
+
+
+    &__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+      img {
+        margin-right: 8px;
+      }
+    }
+    &__title {
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $sangria;
+    }
+    &__text {
+      font-size: 13px;
+      color: $sangria;
+    }
+    & > *{
+    	&:not(:last-child){
+    	    margin-right: 30px;
+    	}
+    }
+  }
+  .go-to-cart {
+    width: 160px;
+    color: $sangria;
+    @media screen and (max-width: 1120px) {
+      margin-left: auto;
+    }
+    @media screen and (max-width: 798px) {
+        display: table;
+      margin: 0 auto;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      .title {
+        width: 90px;
+      }
+      .count {
+        width: 60px;
+        text-align: center;
+      }
+    }
+    &__button {
+      display: block;
+      margin-top: 5px;
+      height: 25px;
+      line-height: 25px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      color: #fff;
+      background: #9F0004;
     }
   }
 }
