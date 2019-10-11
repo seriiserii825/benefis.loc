@@ -6,13 +6,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 1050px) {
+      display: block;
+      text-align: center;
+    }
   }
   &__info {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 1050px) {
+      display: inline-flex;
+      margin-bottom: 10px;
+    }
+    @media screen and (max-width: 660px) {
+      display: block;
+    }
+
+
     select {
       width: 70px;
-      height: 100%;
+      height: 30px;
       background: white;
       cursor: pointer;
     }
@@ -24,24 +37,100 @@
   &__links {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 1050px) {
+      justify-content: center;
+    }
   }
+
   &__phones {
     color: white;
+    @media screen and (max-width: 660px) {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    svg {
+      fill: white;
+      width: 20px;
+      height: 20px;
+    }
+
     li {
+      display: flex;
+      align-items: center;
       padding: 0 10px;
       border-right: 1px solid white;
+      @media screen and (max-width: 660px) {
+        margin-bottom: 10px;
+        justify-content: center;
+        border: none;
+      }
+
+
       &:last-child {
         border: none;
       }
     }
+
     a {
       color: inherit;
     }
+
     span {
       @include robotocondensed;
     }
+
     svg {
       margin-right: 8px;
+    }
+  }
+
+  &__links {
+    @media screen and (max-width: 450px) {
+      display: block;
+    }
+
+  }
+  &__socials {
+    margin-right: 10px;
+    @media screen and (max-width: 450px) {
+      margin-bottom: 10px;
+    }
+
+
+    li {
+      margin-right: 6px;
+      cursor: pointer;
+    }
+
+    a {
+      display: block;
+      height: 30px;
+    }
+
+    svg {
+      fill: white;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .languages {
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    span {
+      display: block;
+      padding: 6px;
+      color: $curios-blue;
+      font-size: 14px;
+      transition: all .3s ease;
+
+      &:hover {
+        color: $allports;
+      }
     }
   }
 }
