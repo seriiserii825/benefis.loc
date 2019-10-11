@@ -1,0 +1,117 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  padding-top: 10px;
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media screen and (max-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 576px) {
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+}
+.product__item {
+  @media screen and (max-width: 576px) {
+    margin-bottom: 30px;
+  }
+}
+.product {
+  &__image {
+    display: block;
+    border: 1px solid #ddd;
+    transition: all .4s ease;
+    &:hover {
+      border-color: $sangria;
+    }
+  }
+  &__title {
+    padding: 6px 0;
+    padding-right: 10px;
+    a {
+      font-size: 15px;
+      font-weight: normal;
+      color: #666;
+    }
+  }
+}
+.reviews__block {
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.reviews__mark {
+  margin: 0 5px;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 17px;
+  float: left;
+}
+.stars_no_active {
+  width: 80px;
+  height: 16px;
+  background-image: url(../i/star.gif);
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+}
+.stars_active {
+  height: 16px;
+  background-image: url(../images/star.gif);
+  background-repeat: repeat-x;
+  background-position: 0px -16px;
+}
+.product__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  span {
+    color: $sangria;
+  }
+}
+.product__item .button__detail {
+  position: relative;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90px;
+  font-size: 16px;
+  color: #9F0004;
+  border-radius: 4px;
+  background: #FFD0D0;
+  &:hover {
+    background: $sangria;
+    svg {
+      fill: white;
+    }
+    span {
+      color: white;
+    }
+  }
+  span {
+    transition: all .3s ease;
+  }
+  svg {
+    width: 14px;
+    height: 20px;
+    fill: $sangria;
+    transition: all .3s ease;
+  }
+}
+
+.title_price {
+  margin-right: 3px;
+}
